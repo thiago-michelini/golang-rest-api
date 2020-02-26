@@ -12,7 +12,7 @@ var Db *sqlx.DB
 //AbrirConexaoDB abre a conexao com o banco de bados
 func AbrirConexaoDB() (err error) {
 	err = nil
-	Db, err = sqlx.Open("firebirdsql", "SYSDBA:masterkey@127.0.0.1/home/thiago/golang.fdb")
+	Db, err = sqlx.Open("firebirdsql", "SYSDBA:masterkey@127.0.0.1/home/thiago/Documentos/golang/thiago-michelini/golang-rest-api/golang.fdb")
 	if err != nil {
 		return
 	}
