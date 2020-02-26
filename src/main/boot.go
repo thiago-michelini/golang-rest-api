@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"net/http"
 
+	"../handlers"
 	"../repo"
 )
 
@@ -20,9 +21,7 @@ func main() {
 		return
 	}
 
-	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
-		fmt.Fprintln(w, "Teste lalala")
-	})
+	http.HandleFunc("/local/", handlers.Local)
 
 	fmt.Printf("Iniciado servidor na porta %s...\n", porta)
 	err = http.ListenAndServe(porta, nil)
